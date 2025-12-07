@@ -17,6 +17,8 @@ public:
     void link();
     void use();
 
+    GLint get_handle() { return shader_program_handle; }
+
 private:
     GLuint shader_program_handle = 0;
 };

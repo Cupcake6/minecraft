@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "Window.hpp"
+#include "Game.hpp"
 
 int main() {
-    Window window;
-    window.loop();
+    Game game;
+    game.loop();
 }

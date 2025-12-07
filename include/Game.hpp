@@ -1,20 +1,17 @@
 #pragma once
 
+#include <cstdint>
+
 #include "gfx.hpp"
-#include "Shader.hpp"
-#include "ShaderProgram.hpp"
 
 class Game {
 private:
-    GLuint VBO = 0;
-    GLuint VAO = 0;
-    GLuint EBO = 0;
-    Shader vertexShader = Shader(Shader::Type::Vertex);
-    Shader fragmentShader = Shader(Shader::Type::Fragment);
-    ShaderProgram shaderProgram = ShaderProgram();
+    GLFWwindow* glfw_window = nullptr;
+    void create_glfw_window();
+
+    static constexpr uint32_t WIDTH = 1200;
+    static constexpr uint32_t HEIGHT = 800;
 
 public:
-    Game();
-    ~Game() noexcept;
-    void update();
+    void loop();
 };

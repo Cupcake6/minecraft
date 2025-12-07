@@ -6,7 +6,7 @@
 #include <cstdint>
 #include <iostream>
 
-static constexpr uint32_t info_log_size = 512;
+static constexpr size_t info_log_size = 512;
 
 Shader::Shader(Type type) {
     shader_handle = glCreateShader(static_cast<GLenum>(type));

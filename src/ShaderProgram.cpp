@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <iostream>
 
-static constexpr uint32_t info_log_size = 512;
+static constexpr size_t info_log_size = 512;
 
 ShaderProgram::ShaderProgram() {
     shader_program_handle = glCreateProgram();
